@@ -1,0 +1,29 @@
+<div>
+	<h1>{{@name}}</h1>
+	This is an example component.
+
+	<ul class="coolthings">
+		{{#each item : @items}}
+			<li>
+				{{ @item.name}} is {{ @item.type}}
+			</li>
+		{{/each}}
+	</ul>
+
+	{{#if @isCool(@name)}}
+		Call arbitrary JS, but be careful!
+	{{#else}}
+		Or don't, whatever.
+	{{/if}}
+
+	{{#with @person}}
+		Change the scope to make `name` be {{@name}}!
+	{{/with}}
+
+	<custom-component greeting="Hello" who="my friend, {{@name}}">
+		Use components that encapsulate some code
+	</custom-component>
+
+	Also, you can inject contents into components here:
+	<content/>
+</div>

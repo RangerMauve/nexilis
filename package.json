@@ -1,0 +1,29 @@
+{
+  "name": "lignum",
+  "version": "1.0.0",
+  "description": "A template language with first class support for nested components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RangerMauve/lignum.git"
+  },
+  "keywords": [
+    "template",
+    "web",
+    "components",
+    "dom",
+    "functional"
+  ],
+  "author": "rangermauve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RangerMauve/lignum/issues"
+  },
+  "homepage": "https://github.com/RangerMauve/lignum#readme",
+  "dependencies": {
+    "template-scope": "^1.0.0"
+  }
+}
