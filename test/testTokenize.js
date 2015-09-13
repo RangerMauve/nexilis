@@ -2,7 +2,7 @@
 var path = require("path");
 var fs = require("fs");
 
-var tokenize = require("../tokenize");
+var tokenize = require("../lib/tokenize");
 var templateName = path.join(__dirname, "./example.html");
 var template = fs.readFileSync(templateName, "utf8");
 var inspect = require("util").inspect;

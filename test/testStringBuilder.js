@@ -2,9 +2,9 @@
 var path = require("path");
 var fs = require("fs");
 
-var stringBuilder = require("../stringBuilder");
-var treeify = require("../treeify");
-var tokenize = require("../tokenize");
+var stringBuilder = require("../lib/stringBuilder");
+var treeify = require("../lib/treeify");
+var tokenize = require("../lib/tokenize");
 var templateName = path.join(__dirname, "./example.html");
 var template = fs.readFileSync(templateName, "utf8");
 var inspect = require("util").inspect;

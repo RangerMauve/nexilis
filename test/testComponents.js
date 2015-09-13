@@ -1,6 +1,6 @@
 "use strict";
-var Components = require("../components");
-var builder = require("../stringBuilder");
+var Components = require("../lib/components");
+var builder = require("../lib/stringBuilder");
 
 var components = new Components(builder);
 
