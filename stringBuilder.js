@@ -83,7 +83,7 @@ function buildComponent(node) {
 	var name = node.name;
 	var content = buildComponentContent(node.children);
 	return "if('" + name + "' in " + components + "){\n" +
-		"\n\t" + echo + "(" + components + "['" + name + "'].render(" + components + "," + content + ", " + buildProps(node.attributes) + "\n\t));" +
+		"\n\t" + echo + "(" + components + "['" + name + "'].render(" + buildProps(node.attributes) + ", " + content + "\n\t));" +
 		"\n\t} else {\n\t" + buildElement(node) + "\n\t}";
 }
 
