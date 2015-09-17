@@ -1,9 +1,9 @@
 "use strict";
-var Lignum = require("./lib/lignum");
+var Nexilis = require("./lib/nexilis");
 var stringBuilder = require("./lib/stringBuilder");
 
-var defaultInstance = new Lignum(stringBuilder);
+var defaultInstance = new Nexilis(stringBuilder);
 
-defaultInstance.Lignum = Lignum;
+defaultInstance.Nexilis = Nexilis;
 
 module.exports = defaultInstance;

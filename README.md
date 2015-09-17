@@ -1,4 +1,4 @@
-# lignum
+# nexilis
 A template language with first class support for nested components.
 
 **THIS HAS NOT YET BEEN RELEASED ON NPM**
@@ -6,27 +6,27 @@ A template language with first class support for nested components.
 ## Quickstart
 
 ```
-npm install --save lignum
+npm install --save nexilis
 ```
 
 ```javascript
-var lignum = require("lignum");
+var nexilis = require("nexilis");
 
-lignum.addComponent({
+nexilis.addComponent({
     name: "hello-world",
     template: "<div>{{@greeting}}, {{@thing}}!</div>"
 });
 
-lignum.render("hello-world", {
+nexilis.render("hello-world", {
     greeting: "Hello",
-    thing: "Lignum"
+    thing: "Nexilis"
 });
 
-// <div>Hello, Lignum!</div>
+// <div>Hello, Nexilis!</div>
 ```
 
 ## Template syntax
-Lignum expects templates to contain a subset of HTML that follows these rules:
+Nexilis expects templates to contain a subset of HTML that follows these rules:
 - Self-closing tags should explicitly contain a `/>` at the end. For example `<img src="foobar.png">` will cause a compilation error. Instead you should use `<img src="foobar.png"/>`
 - XML namespaces aren't really supported at the moment
 
@@ -42,7 +42,7 @@ There are six basic pieces of syntax:
 Text is the same as text content in HTML, except there can be Expressions interleaved in between bits of text.
 
 ### Scope Variables
-To differentiate between regular javascript variables in expressions and blocks and variables that are specific to the scope, Lignum uses a special syntax using `@` signs in expressions.
+To differentiate between regular javascript variables in expressions and blocks and variables that are specific to the scope, Nexilis uses a special syntax using `@` signs in expressions.
 
 For example, if your state contains a key called `foo`, you can reference it by using `@foo` in an expression. If you need to reference whatever is in the current scope directly, you can use `@` to get a reference to it directly. This is handy for iteration when the scope gets set to the item.
 
@@ -58,7 +58,7 @@ Elements that contain a dash `-` in the name, will be treated as Components.
 
 If a component hasn't been added with the given name, it will be treated as a regular element. This allows you to play nice with HTML custom elements.
 
-Components can be defined by by using the `lignum.addComponent(component)` method and passing in a name and template.
+Components can be defined by by using the `nexilis.addComponent(component)` method and passing in a name and template.
 
 A component will contain its own template whose scope will be isolated from the parent. If you want to pass data into the component, you do so by specifying attributes.
 
@@ -103,7 +103,7 @@ Sometimes you want to pass in data structures that are more complex than just a 
 For example, if you have a list that you want to pass into a component you might have something like this:
 
 ```javascript
-lignum.render("main-component", {
+nexilis.render("main-component", {
     people: [{name: "Alice"}, {name: "Bob"}]
 });
 ```
@@ -115,7 +115,7 @@ lignum.render("main-component", {
 **Note:** Even though you're just specifying an expression, you must still use quotation marks around it.
 
 ### Expressions
-Custom logic within templating languages is often abstracted away to a small set of features like iteration or conditionals. Lignum wants to provide you with all of JavaScript in order to have full flexibility in what you want to do. The only difference from standard JS is that there is special syntax for referencing scope variables (see above).
+Custom logic within templating languages is often abstracted away to a small set of features like iteration or conditionals. Nexilis wants to provide you with all of JavaScript in order to have full flexibility in what you want to do. The only difference from standard JS is that there is special syntax for referencing scope variables (see above).
 
 Expressions are bits of JavaScript within `{{ }}` curly braces. You can have any JavaScript you want within the expression, but note that things like `if` blocks or `for` loops won't work since an expression that looks like `{{ if(@foo) "bar"}}` will get rendered into a function that might look like `echo( if(scope.get(foo)) "bar" )` which isn't valid JavaScript and will cause an error during compilation. For those two use cases, it is recommended that you use blocks for these situations which are described below.
 
