@@ -41,6 +41,10 @@ There are six basic pieces of syntax:
 ### Text
 Text is the same as text content in HTML, except there can be Expressions interleaved in between bits of text.
 
+```html
+Hello World!
+```
+
 ### Scope Variables
 To differentiate between regular javascript variables in expressions and blocks and variables that are specific to the scope, Nexilis uses a special syntax using `@` signs in expressions.
 
@@ -54,7 +58,7 @@ Elements are the same as they would be in HTML, except you can have expressions 
 ```
 
 ### Components
-Elements that contain a dash `-` in the name, will be treated as Components.
+Elements that contain a dash `-` in the name, will be treated as Components. This is based off of the way the new [Custom Elements](http://webcomponents.org/articles/introduction-to-custom-elements/) spec works.
 
 If a component hasn't been added with the given name, it will be treated as a regular element. This allows you to play nice with HTML custom elements.
 
@@ -94,7 +98,7 @@ nexilis.render("parent-component");
 ```
 
 #### Attributes
-Attributes can exist in one of tree forms:
+Attributes can exist in one of three forms:
 
 ##### Name only
 If you just specify the name for an attribute and don't have any content, then it'll be the same as specifying `name: true`. So if you say, have a custom button, and you want to apply a class to it dynamically, you might have something that looks like:
