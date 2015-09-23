@@ -1,8 +1,6 @@
 # nexilis
 A template language with first class support for nested components.
 
-**THIS HAS NOT YET BEEN RELEASED ON NPM**
-
 ## Quickstart
 
 ```
