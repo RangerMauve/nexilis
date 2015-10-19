@@ -25,6 +25,7 @@
   "homepage": "https://github.com/RangerMauve/nexilis#readme",
   "dependencies": {
     "function-regex": "^1.0.2",
-    "template-scope": "^1.0.1"
+    "template-scope": "^1.0.1",
+    "virtual-dom": "^2.1.1"
   }
 }
