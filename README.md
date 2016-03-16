@@ -8,6 +8,7 @@ npm install --save nexilis
 ```
 
 ```javascript
+// Using default string output
 var nexilis = require("nexilis");
 
 nexilis.addComponent({
@@ -21,6 +22,37 @@ nexilis.render("hello-world", {
 });
 
 // <div>Hello, Nexilis!</div>
+```
+
+```javascript
+// Using Virtual-Dom output
+var Nexilis = require("nexilis").Nexilis;
+var vdomBuilder = require("nexilis/lib/vdomBuilder");
+
+var nexilis = new Nexilis(vdomBuilder);
+
+nexilis.addComponent({
+    name: "hello-world",
+    template: "<div>{{@greeting}}, {{@thing}}!</div>"
+});
+
+nexilis.render("hello-world", {
+    greeting: "Hello",
+    thing: "Nexilis"
+});
+
+/*
+{
+  tagName: "DIV",
+  properties: {attributes:{}},
+  children: [
+    {text:"Hello"},
+    {text:", "},
+    {text:"Nexilis"},
+    {text:"!"}
+  ]
+}
+ */
 ```
 
 ## Template syntax
