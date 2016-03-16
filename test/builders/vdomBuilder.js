@@ -2,10 +2,11 @@
 var test = require("tape");
 var minify = require("html-minifier").minify;
 var victorica = require("victorica");
+var stringify = require("vdom-to-html");
 
 test("Renders expected HTML output for kitchen-sink", function(t) {
 	var Nexilis = require("../../lib/nexilis");
-	var builder = require("../../lib/stringBuilder");
+	var builder = require("../../lib/vdomBuilder");
 	var kitchen = require("../templates/kitchen-sink");
 
 	// Set up the builder and the kitchen sink component
@@ -18,13 +19,12 @@ test("Renders expected HTML output for kitchen-sink", function(t) {
 	// Format the expected result
 	var expected = formatHTML(kitchen.expected);
 
-	var formattedResult = formatHTML(result);
+	var formattedResult = formatHTML(stringify(result));
 
 	t.deepEqual(formattedResult, expected, "rendered output looks like what is expected");
 
 	t.end();
 });
-
 
 function formatHTML(html) {
 	return victorica(minify(html, {

@@ -281,8 +281,8 @@ This is what you call whenever you want to render what will be the top level com
 ## Roadmap
 - [x] Create overall structure for syntax, components and rendering
 - [x] String renderer
+- [x] Virtual-Dom renderer
+- [ ] Incremental-Dom renderer
 - [ ] Create CLI utility for pre-compiling templates
 - [ ] Define folder structure for components
 - [ ] Add way to compile folders into component definitions to CLI
-- [ ] Virtual-Dom renderer
-- [ ] Incremental-Dom renderer

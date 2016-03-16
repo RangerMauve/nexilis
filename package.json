@@ -33,6 +33,6 @@
     "idom2string": "^0.3.0",
     "tape": "^4.5.1",
     "vdom-to-html": "^2.2.0",
-    "virtual-dom": "^2.1.1"
+    "victorica": "0.0.2"
   }
 }
