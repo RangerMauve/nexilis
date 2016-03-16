@@ -4,7 +4,7 @@
   "description": "A template language with first class support for nested components.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,13 @@
   "dependencies": {
     "function-regex": "^1.0.2",
     "template-scope": "^1.0.1",
+    "virtual-dom": "^2.1.1"
+  },
+  "devDependencies": {
+    "html-minifier": "^1.2.0",
+    "idom2string": "^0.3.0",
+    "tape": "^4.5.1",
+    "vdom-to-html": "^2.2.0",
     "virtual-dom": "^2.1.1"
   }
 }

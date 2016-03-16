@@ -1,0 +1,171 @@
+"use strict";
+module.exports = [{
+	type: 'elementStart',
+	name: 'div'
+}, {
+	type: 'elementEnd'
+}, {
+	type: 'textContent',
+	content: '\r\n\t'
+}, {
+	type: 'elementStart',
+	name: 'h1'
+}, {
+	type: 'elementEnd'
+}, {
+	type: 'expression',
+	content: '@name'
+}, {
+	type: 'elementClose',
+	name: 'h1'
+}, {
+	type: 'textContent',
+	content: '\r\n\tThis is an example component.\r\n\r\n\t'
+}, {
+	type: 'elementStart',
+	name: 'ul'
+}, {
+	type: 'attributeName',
+	name: 'class'
+}, {
+	type: 'attributeStart'
+}, {
+	type: 'textContent',
+	content: 'coolthings'
+}, {
+	type: 'attributeEnd'
+}, {
+	type: 'elementEnd'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\t'
+}, {
+	type: 'blockStart',
+	name: 'each',
+	content: ' @items'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\t\t'
+}, {
+	type: 'elementStart',
+	name: 'li'
+}, {
+	type: 'elementEnd'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\t\t\t'
+}, {
+	type: 'expression',
+	content: ' @name'
+}, {
+	type: 'textContent',
+	content: ' is '
+}, {
+	type: 'expression',
+	content: ' @type'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\t\t'
+}, {
+	type: 'elementClose',
+	name: 'li'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\t'
+}, {
+	type: 'blockClose',
+	name: 'each'
+}, {
+	type: 'textContent',
+	content: '\r\n\t'
+}, {
+	type: 'elementClose',
+	name: 'ul'
+}, {
+	type: 'textContent',
+	content: '\r\n\r\n\t'
+}, {
+	type: 'blockStart',
+	name: 'if',
+	content: ' @isCool(@name)'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\tCall arbitrary JS, but be careful!\r\n\t'
+}, {
+	type: 'blockClose',
+	name: 'if'
+}, {
+	type: 'textContent',
+	content: '\r\n\r\n\t'
+}, {
+	type: 'blockStart',
+	name: 'with',
+	content: ' @person'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\tChange the scope to make `name` be '
+}, {
+	type: 'expression',
+	content: '@name'
+}, {
+	type: 'textContent',
+	content: '!\r\n\t'
+}, {
+	type: 'blockClose',
+	name: 'with'
+}, {
+	type: 'textContent',
+	content: '\r\n\r\n\t'
+}, {
+	type: 'elementStart',
+	name: 'custom-component'
+}, {
+	type: 'attributeName',
+	name: 'greeting'
+}, {
+	type: 'attributeStart'
+}, {
+	type: 'textContent',
+	content: 'Hello'
+}, {
+	type: 'attributeEnd'
+}, {
+	type: 'attributeName',
+	name: 'who'
+}, {
+	type: 'attributeStart'
+}, {
+	type: 'textContent',
+	content: 'my friend, '
+}, {
+	type: 'expression',
+	content: '@name'
+}, {
+	type: 'attributeEnd'
+}, {
+	type: 'elementEnd'
+}, {
+	type: 'textContent',
+	content: '\r\n\t\tUse components that encapsulate some code\r\n\t'
+}, {
+	type: 'elementClose',
+	name: 'custom-component'
+}, {
+	type: 'textContent',
+	content: '\r\n\r\n\tAlso, you can inject contents into components here:\r\n\t'
+}, {
+	type: 'elementStart',
+	name: 'content'
+}, {
+	type: 'elementClose',
+	name: undefined
+}, {
+	type: 'textContent',
+	content: '\r\n'
+}, {
+	type: 'elementClose',
+	name: 'div'
+}, {
+	type: 'textContent',
+	content: '\r\n'
+}];
