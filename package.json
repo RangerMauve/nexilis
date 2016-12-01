@@ -1,6 +1,6 @@
 {
   "name": "nexilis",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A template language with first class support for nested components.",
   "main": "index.js",
   "scripts": {
